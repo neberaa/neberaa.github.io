@@ -17,11 +17,23 @@
         <div class="hero__container"><img class="hero__img" src="img/content/photo.jpg" alt="">
           <h1 class="hero__title">Антон Небера</h1>
           <p class="hero__text">Личный сайт веб разработчика</p>
-        </div><a class="arrow-icon icon-arrow-down" href="#"></a><a class="hamburger icon-hamburger" href="#"></a>
-        <ul class="socials">
-          <li class="socials__item"><a class="socials__link icon-vk" href="#"></a></li>
-          <li class="socials__item"><a class="socials__link icon-github" href="#"></a></li>
-          <li class="socials__item"><a class="socials__link icon-in" href="#"></a></li>
+        </div><a class="arrow-icon icon-arrow-down" href="#"></a><a class="icon-link" href="#">
+          <svg class="hamburger-icon">
+            <use xlink:href="../img/sprite/sprite.svg#hamburger"></use>
+          </svg></a>
+        <ul class="socials socials_top-left">
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon">
+                <use xlink:href="../img/sprite/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon">
+                <use xlink:href="../img/sprite/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon">
+                <use xlink:href="../img/sprite/sprite.svg#in"></use>
+              </svg></a></li>
         </ul>
       </header>
       <section class="about">
@@ -131,12 +143,27 @@
         <div id="map"></div>
         <div class="contacts-block">
           <div class="block-title">Контакты</div>
-          <ul class="contacts__list">
-            <li class="contacts__item">anthonynebera<a class="contacts__link icon-skype" href="skype:anthonynebera"></a></li>
-            <li class="contacts__item">neberaanton@gmail.com<a class="contacts__link icon-envelope" href="mailto:neberaanton@gmail.com"></a></li>
-            <li class="contacts__item">+ 38 067 54 22 645<a class="contacts__link icon-phone" href="tel:+38 067 54 22 645"></a></li>
-            <li class="contacts__item">г.Харьков, ул. 23 Августа, 55<a class="contacts__link icon-map" href="#"></a></li>
-          </ul>
+          <ul class="contacts__list"><a class="contacts__link" href="skype:anthonynebera">
+              <li class="contacts__item">anthonynebera
+                <svg class="contacts__icon">
+                  <use xlink:href="../img/sprite/sprite.svg#skype"></use>
+                </svg>
+              </li></a><a class="contacts__link" href="mailto:neberaanton@gmail.com">
+              <li class="contacts__item">neberaanton@gmail.com
+                <svg class="contacts__icon">
+                  <use xlink:href="../img/sprite/sprite.svg#envelope"></use>
+                </svg>
+              </li></a><a class="contacts__link" href="tel:+38 067 54 22 645">
+              <li class="contacts__item">+ 38 067 54 22 645
+                <svg class="contacts__icon">
+                  <use xlink:href="../img/sprite/sprite.svg#phone"></use>
+                </svg>
+              </li></a><a class="contacts__link" href="#">
+              <li class="contacts__item">г.Харьков, ул. 23 Августа, 55
+                <svg class="contacts__icon">
+                  <use xlink:href="../img/sprite/sprite.svg#map_marker"></use>
+                </svg>
+              </li></a></ul>
         </div>
       </section>
       <footer class="footer">
@@ -149,13 +176,20 @@
               <li class="navigation__item navigation__item_margin"> <a class="navigation__link" href="login.html">Авторизация</a></li>
             </ul>
           </nav>
-          <div class="footer-socials">
-            <ul class="footer-socials__list">
-              <li class="footer-socials__item"><a class="footer-socials__link icon-vk-round" href="#"></a></li>
-              <li class="footer-socials__item"><a class="footer-socials__link icon-github-round" href="#"></a></li>
-              <li class="footer-socials__item"><a class="footer-socials__link icon-in-round" href="#"></a></li>
-            </ul>
-          </div>
+          <ul class="socials socials_bottom_right">
+            <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+                <svg class="socials__icon socials__icon_size">
+                  <use xlink:href="../img/sprite/sprite.svg#vk_round"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+                <svg class="socials__icon socials__icon_size">
+                  <use xlink:href="../img/sprite/sprite.svg#github_round"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+                <svg class="socials__icon socials__icon_size">
+                  <use xlink:href="../img/sprite/sprite.svg#in_round"></use>
+                </svg></a></li>
+          </ul>
         </div>
         <div class="footer__bottom">
           <div class="footer__desc">Сайт-портфолио веб разработчика Неберы Антона.</div>
@@ -163,8 +197,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
+    <script src="../js/components/_map.js"></script>
   </body>
-  <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
-  <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
-  <script src="../js/components/_map.js"></script>
 </html>

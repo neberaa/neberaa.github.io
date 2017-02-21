@@ -15,10 +15,19 @@
       <div class="hero-container"><img class="hero__img hero__img_margin-top" src="img/content/photo.jpg" alt="">
         <h1 class="hero__title hero__title_grey">Антон Небера</h1>
         <p class="hero__text hero__text_grey">Личный сайт веб разработчика</p>
-        <ul class="socials_width-bottom">
-          <li class="socials__item"><a class="socials__link icon-vk_green" href="#"></a></li>
-          <li class="socials__item"><a class="socials__link icon-github_green" href="#"></a></li>
-          <li class="socials__item"><a class="socials__link icon-in_green" href="#"></a></li>
+        <ul class="socials socials_center socials_margin-top">
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon socials__icon_green">
+                <use xlink:href="../img/sprite/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon socials__icon_green">
+                <use xlink:href="../img/sprite/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link socials__link_opacity" href="#">
+              <svg class="socials__icon socials__icon_green">
+                <use xlink:href="../img/sprite/sprite.svg#in"></use>
+              </svg></a></li>
         </ul>
         <nav class="navigation navigation_bottom_green">
           <ul class="navigation__list navigation__list_font0">
@@ -30,8 +39,8 @@
       </div><a class="log-in-button" href="login.html">Авторизоваться</a>
       <div class="copyright copyright_bottom">&copy создано с любовью при поддержке Loftschool.com |  2017</div>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
+    <script src="../js/components/_map.js"></script>
   </body>
-  <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
-  <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
-  <script src="../js/components/_map.js"></script>
 </html>
