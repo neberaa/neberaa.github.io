@@ -7,6 +7,10 @@
     <link href="/css/main.css" rel="stylesheet">
     <link href="../img/icons/favicon.png" rel="icon" type="image/png" sizes="32x32">
     <link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDL1x7Ink_3QUQ_vxwa2jOiw-9KLC7EIg" defer></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js" defer></script>
+    <script src="/js/components/map.js" defer></script>
+    <script src="https://use.fontawesome.com/7d7f486b48.js" defer></script>
     <title>A.N. about
     </title>
   </head>
@@ -20,14 +24,14 @@
             <input class="text-input pass-input" type="password" name="password" placeholder="Пароль"><i class="input-icon icon-key-square"></i>
           </fieldset>
           <fieldset>
-            <input id="check" type="checkbox" name="check" hidden checked>
+            <input id="check" type="checkbox" name="check" hidden>
             <label for="check">Я человек</label>
           </fieldset>
           <fieldset>
             <label class="label_bold" for="">Вы точно не робот?</label>
           </fieldset>
           <fieldset>
-            <input id="human" type="radio" name="human" value="yes" hidden checked>
+            <input id="human" type="radio" name="human" value="yes" hidden>
             <label class="label_margin" for="human">Да</label>
             <input id="robot" type="radio" name="human" value="no" hidden>
             <label for="robot">Не уверен</label>
@@ -42,8 +46,5 @@
       </div>
       <div class="copyright copyright_bottom">&copy создано с любовью при поддержке Loftschool.com |  2017</div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
-    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
-    <script src="../js/components/_map.js"></script>
   </body>
 </html>
