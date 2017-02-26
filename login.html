@@ -18,27 +18,29 @@
     <div class="wrapper">
       <section class="hero">
         <div class="hero-container">
-          <div class="block-title">Авторизуйтесь</div>
           <form class="authoriz-form">
+            <div class="block-title">Авторизуйтесь</div>
             <label class="login-form__label">
               <input class="text-input" type="text" name="login" placeholder="Логин"><span class="fa fa-user"></span>
             </label>
             <label class="login-form__label">
               <input class="text-input" type="password" name="password" placeholder="Пароль"><span class="fa fa-key"></span>
             </label>
-            <fieldset>
-              <input id="check" type="checkbox" name="check" hidden>
-              <label for="check">Я человек</label>
-            </fieldset>
-            <fieldset>
-              <label class="label_bold" for="">Вы точно не робот?</label>
-            </fieldset>
-            <fieldset>
-              <input id="human" type="radio" name="human" value="yes" hidden>
-              <label class="label_margin" for="human">Да</label>
-              <input id="robot" type="radio" name="human" value="no" hidden>
-              <label for="robot">Не уверен</label>
-            </fieldset>
+            <div class="check-container">
+              <fieldset>
+                <input id="check" type="checkbox" name="check" hidden>
+                <label for="check">Я человек</label>
+              </fieldset>
+              <fieldset>
+                <label class="label_bold" for="">Вы точно не робот?</label>
+              </fieldset>
+              <fieldset>
+                <input id="human" type="radio" name="human" value="yes" hidden>
+                <label class="label_margin" for="human">Да</label>
+                <input id="robot" type="radio" name="human" value="no" hidden>
+                <label for="robot">Не уверен</label>
+              </fieldset>
+            </div>
             <nav class="navigation navigation_bottom_green">
               <ul class="navigation__list navigation__list_font0">
                 <li class="navigation__item navigation__item_half-width"><a class="navigation__link navigation__link_white" href="index.html">На главную</a></li>
