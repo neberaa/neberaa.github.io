@@ -1,5 +1,4 @@
-
-    google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'load', init);
     var map, markersArray = [];
 
     function bindInfoWindow(marker, map, location) {
@@ -56,14 +55,18 @@
                                 break;
                             case 'open_hours':
                                 var items = '';
-                                for (var i = 0; i < location.open_hours.length; ++i) {
-                                    if (i !== 0){
-                                        items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours +'</strong></li>';
+                                if (location.open_hours.length > 0){
+                                    for (var i = 0; i < location.open_hours.length; ++i) {
+                                        if (i !== 0){
+                                            items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours +'</strong></li>';
+                                        }
+                                        var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>' + location.open_hours[0].day + '</strong><strong>' + location.open_hours[0].hours +'</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
                                     }
-                                    var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>' + location.open_hours[0].day + '</strong><strong>' + location.open_hours[0].hours +'</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
+                                    return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
+                                 } else {
+                                    return '';
                                 }
-                                return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
-                                 break;
+                                break;
                          }
                     } else {
                         return '';
@@ -108,15 +111,15 @@
 
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(36.580247,-41.817628),
-            zoom: 4,
+            center: new google.maps.LatLng(36.58124,-41.817628),
+            zoom: 5,
             gestureHandling: 'auto',
             fullscreenControl: false,
             zoomControl: false,
             disableDoubleClickZoom: true,
             mapTypeControl: false,
             scaleControl: false,
-            scrollwheel: true,
+            scrollwheel: false,
             streetViewControl: false,
             draggable : true,
             clickableIcons: false,
