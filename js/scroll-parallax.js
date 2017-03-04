@@ -1,5 +1,5 @@
-/*var parallax = (function () {
-	var bg = document.querySelector('.hero-bg');
+var parallax = (function () {
+	var bg = document.querySelector('.hero__bg');
 	var user = document.querySelector('.hero-wrapper');
 	var decorText = document.querySelector('.hero__img-decor');
 
@@ -24,4 +24,4 @@
 window.onscroll = function () {
 	var wScroll = window.pageYOffset;
 	parallax.init(wScroll);
-}*/
+}
