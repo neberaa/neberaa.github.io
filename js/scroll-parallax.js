@@ -1,22 +1,25 @@
 var parallax = (function () {
 	var bg = document.querySelector('.hero__bg');
-	var user = document.querySelector('.hero-wrapper');
-	var decorText = document.querySelector('.hero__img-decor');
+	var cloud = document.querySelector('.hero__decor-cloud');
+	var decorText = document.querySelector('.decor__portfolio');
 
 	return {
 		move: function (block, windowScroll, strafeAmount) {
 			var strafe = windowScroll / -strafeAmount + '%';
-			var transformString = 'translate3d(0,' + strafeAmount + ',0)';
+			var transformString = 'translate3d(0,' + strafe + ',0)';
+			var strafeScroll = window.pageYOffset;
+			var opacity = 1 - (strafeScroll/1000);
 			var style = block.style;
 
+			style.opacity = opacity;
 			style.transform = transformString;
 			style.webkitTransform = transformString;
 		}, 
 
 		init: function(wScroll)  {
-			this.move(bg, wScroll, 45);
-			this.move(user, wScroll, 3);
-			this.move(decorText, wScroll, 20);
+			this.move(bg, wScroll, 50);
+			this.move(cloud, wScroll, 20);
+			this.move(decorText, wScroll, 10);
 		}
 	}
 }());
