@@ -1,7 +1,7 @@
 var parallax = (function () {
 	var bg = document.querySelector('.hero__bg');
 	var cloud = document.querySelector('.hero__decor-cloud');
-	var decorText = document.querySelector('.decor__portfolio');
+	var decorText = document.querySelector('.hero__decor');
 
 	return {
 		move: function (block, windowScroll, strafeAmount) {
@@ -17,7 +17,7 @@ var parallax = (function () {
 		}, 
 
 		init: function(wScroll)  {
-			this.move(bg, wScroll, 50);
+			this.move(bg, wScroll, 45);
 			this.move(cloud, wScroll, 20);
 			this.move(decorText, wScroll, 10);
 		}

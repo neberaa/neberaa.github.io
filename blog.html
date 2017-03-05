@@ -9,9 +9,12 @@
     <link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDL1x7Ink_3QUQ_vxwa2jOiw-9KLC7EIg" defer></script>
     <script src="https://cdn.mapkit.io/v1/infobox.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" defer></script>
     <script src="/js/components/map.js" defer></script>
     <script src="/js/parallax.js" defer></script>
     <script src="/js/scroll-parallax.js" defer></script>
+    <script src="/js/scroll-menu.js" defer></script>
+    <script src="/js/navbar-phone.js" defer></script>
     <script src="https://use.fontawesome.com/7d7f486b48.js" defer></script>
     <title>AN blog
     </title>
@@ -19,11 +22,12 @@
   <body>
     <div class="wrapper">
       <header class="hero">
-        <div class="hero__bg"><img class="hero__bg-img" src="img/bg/portfolio.jpg" alt=""></div>
-        <div class="hero__decor-cloud"><img src="img/decor/cloud.png" alt=""></div>
+        <div class="hero__bg"><img class="hero__bg-img" src="img/bg/portfolio.jpg" alt="mountains-view"></div>
+        <div class="hero__decor-cloud"><img src="img/decor/cloud.png" alt="cloud"></div>
+        <div class="hero__decor"><img class="decor__portfolio decor__portfolio_blog" src="img/decor/blog-header.png" alt="title"></div>
         <div class="hero-wrapper hero-wrapper_centerY">
           <div class="hero__img"></div>
-          <div class="block-title block-title_big-white">Блог<img class="hero__img-decor" src="img/decor/blog-header.png" alt=""></div>
+          <div class="block-title block-title_big-white">Блог</div>
           <p class="block-text block-text_center-white">Свежие новости и интересные статьи из мира IT</p>
         </div><a href="#">
           <svg class="arrow-icon">
@@ -56,11 +60,14 @@
         </svg>
         <div class="content-wrapper">
           <aside class="blog-nav">
-            <ul class="blog-nav__list"><a class="blog-nav__link" href="#">
-                <li class="blog-nav__item">Шпаргалка по FlexBox</li></a><a class="blog-nav__link" href="#">
-                <li class="blog-nav__item">Github команды</li></a><a class="blog-nav__link" href="#" active>
-                <li class="blog-nav__item blog-nav__item_active">Введение в консоль</li></a><a class="blog-nav__link" href="#">
-                <li class="blog-nav__item">Самый необходимый набор Gulp плагинов</li></a></ul>
+            <div class="wrap-blog-nav">
+              <ul class="blog-nav__list">
+                <li class="blog-nav__item">Введение в консоль</li>
+                <li class="blog-nav__item">Самый необходимый набор Gulp плагинов</li>
+                <li class="blog-nav__item">Шпаргалка по FlexBox</li>
+                <li class="blog-nav__item">Github команды</li>
+              </ul>
+            </div>
           </aside>
           <div class="blog-content">
             <div class="blog-article"><a class="sidebar-link" href="#"><i class="fa fa-circle"></i></a>
@@ -81,6 +88,14 @@
             </div>
             <div class="blog-article">
               <div class="article__header">Шпаргалка по FlexBox</div>
+              <div class="article__date">22 февраля 2017</div>
+              <div class="article__text">
+                <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+              </div>
+            </div>
+            <div class="blog-article">
+              <div class="article__header">Github команды</div>
               <div class="article__date">22 февраля 2017</div>
               <div class="article__text">
                 <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
