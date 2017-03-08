@@ -16,12 +16,25 @@
     <script src="/js/scroll-menu.js" defer></script>
     <script src="/js/navbar-phone.js" defer></script>
     <script src="/js/flip-card.js" defer></script>
+    <script src="/js/slider.js" defer></script>
+    <script src="/js/anmtxt.js" defer></script>
+    <script src="/js/fullscreen-menu.js" defer></script>
     <script src="https://use.fontawesome.com/7d7f486b48.js" defer></script>
     <title>A.N. works
     </title>
   </head>
   <body>
     <div class="wrapper">
+      <div class="menu-container"><a class="x-icon__container" href="#"><i class="fa fa-times"></i></a>
+        <div class="menu-items__container">
+          <ul class="menu-list">
+            <li class="menu-item section-title_white"><a class="menu-link" href="works.html">Мои работы</a></li>
+            <li class="menu-item section-title_white"><a class="menu-link" href="blog.html">Блог</a></li>
+            <li class="menu-item section-title_white"><a class="menu-link" href="about.html">Обо мне</a></li>
+            <li class="menu-item section-title_white"><a class="menu-link" href="index.html">Авторизация</a></li>
+          </ul>
+        </div>
+      </div>
       <header class="hero">
         <div class="hero__bg"><img src="img/bg/portfolio.jpg" alt="mountain-view"></div>
         <div class="hero__decor-cloud"><img src="img/decor/cloud.png" alt="cloud"></div>
@@ -52,7 +65,7 @@
               </svg></a></li>
         </ul>
       </header>
-      <section class="works">
+      <section class="works-container">
         <svg class="triangle triangle_left triangle_white" viewbox="0 0 1000 110" preserveAspectRatio="none">
           <polygon points="0,0 0,110 1000, 110"></polygon>
         </svg>
@@ -62,31 +75,35 @@
         <div class="works-title">
           <div class="block-title block-title_big">Мои работы<img class="hero__img-decor" src="img/decor/works-header.png" alt=""></div>
         </div>
-        <div class="works-content"><a href="#">
-            <svg class="slider__arrow slider__arrow-left">
-              <use xlink:href="../img/sprite/sprite.svg#arrow_down"></use>
-            </svg></a><a href="#">
-            <svg class="slider__arrow slider__arrow-right">
-              <use xlink:href="../img/sprite/sprite.svg#arrow_down"></use>
-            </svg></a>
-          <div class="slider__left-col">
-            <div class="work-img"></div>
-          </div>
-          <div class="slider__right-col">
-            <div class="work-about-wrapper">
-              <div class="article__header">Сайт школы онлайн образования</div>
-              <div class="slider__desc">html, css, javascript</div><a class="slider__btn" href="#">Посмотреть сайт
-                <svg class="link-icon">
-                  <use xlink:href="../img/sprite/sprite.svg#link"> </use>
-                </svg></a>
+        <section class="section works">
+          <div class="works__content">
+            <div class="works__left">
+              <div class="works-slider__content">
+                <div class="works-slider__content-wrapper">
+                  <div class="works-slider__display"><img class="works-slider__display-pic" src="" alt=""></div>
+                  <div class="works-slider__item-about">
+                    <div class="works__subtitle">
+                      <div class="subtitle"><span class="letter-word"><span class="letter-span active">А</span><span class="letter-span active">г</span><span class="letter-span active">е</span><span class="letter-span active">н</span><span class="letter-span active">с</span><span class="letter-span active">т</span><span class="letter-span active">в</span><span class="letter-span active">о</span></span><span class="letter-word"><span class="letter-span active">и</span><span class="letter-span active">н</span><span class="letter-span active">т</span><span class="letter-span active">е</span><span class="letter-span active">р</span><span class="letter-span active">н</span><span class="letter-span active">е</span><span class="letter-span active">т</span></span><span class="letter-word"><span class="letter-span active">р</span><span class="letter-span active">е</span><span class="letter-span active">ш</span><span class="letter-span active">е</span><span class="letter-span active">н</span><span class="letter-span active">и</span><span class="letter-span active">й</span><span class="letter-span active"></span></span><span class="letter-word"><span class="letter-span active">"</span><span class="letter-span active">I</span><span class="letter-span active">T</span><span class="letter-span active">L</span><span class="letter-span active">o</span><span class="letter-span active">f</span><span class="letter-span active">t</span><span class="letter-span active">"</span></span></div>
+                    </div>
+                    <div class="works__content-desc"><span class="letter-word"><span class="letter-span active">n</span><span class="letter-span active">o</span><span class="letter-span active">d</span><span class="letter-span active">e</span></span></div>
+                    <div class="works__content-btn"><a class="works__content-view" href="itloft.ru"><i class="fa works__content-view-icon fa-link"></i> Посмотреть сайт</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="works__right">
+              <div class="works-slider">
+                <div class="works-slider__controls"><a class="works-slider__control-btn works-slider__control-btn_left" href="#">
+                    <ul class="works-slider__control-list">
+                      <li class="works-slider__control-item" data-full="./img/content/slider/1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/"><img class="works-slider___control-img" src="./img/content/slider/1.png"></li>
+                      <li class="works-slider__control-item" data-full="./img/content/slider/2.png" data-title="Школа онлай-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/"><img class="works-slider___control-img" src="./img/content/slider/2.png"></li>
+                      <li class="works-slider__control-item" data-full="./img/content/slider/3.png" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/"><img class="works-slider___control-img" src="./img/content/slider/3.png"></li>
+                      <li class="works-slider__control-item" data-full="./img/content/slider/4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/"><img class="works-slider___control-img" src="./img/content/slider/4.png"></li>
+                    </ul></a><a class="works-slider__control-btn works-slider__control-btn_right" href="#"></a></div>
+              </div>
             </div>
           </div>
-          <ul class="navigation-dots"><a href="#">
-              <li class="dot dot_active"></li></a><a href="#">
-              <li class="dot"></li></a><a href="#">
-              <li class="dot"></li></a><a href="#">
-              <li class="dot"></li></a></ul>
-        </div>
+        </section>
       </section>
       <section class="feedback-wrapper">
         <div class="works-title">
@@ -140,7 +157,7 @@
               <li class="navigation__item navigation__item_footer"><a class="navigation__link" href="works.html">Мои работы</a></li>
               <li class="navigation__item navigation__item_footer"><a class="navigation__link" href="about.html">Обо мне</a></li>
               <li class="navigation__item navigation__item_footer"><a class="navigation__link" href="blog.html">Блог</a></li>
-              <li class="navigation__item navigation__item_footer"><a class="navigation__link" href="login.html">Авторизация</a></li>
+              <li class="navigation__item navigation__item_footer"><a class="navigation__link" href="index.html">Авторизация</a></li>
             </ul>
           </nav>
           <ul class="socials socials_bottom_right">
@@ -159,8 +176,8 @@
           </ul>
         </div>
         <div class="footer__bottom">
-          <div class="footer__desc footer__desc_centerY">Сайт-портфолио веб разработчика Неберы Антона.</div>
-          <div class="copyright copyright_right-centerY">&copy создано с любовью при поддержке Loftschool.com| 2017</div>
+          <div class="footer__desc footer__desc_centerY">Anton Nebera web development </div>
+          <div class="copyright copyright_right-centerY">&copy made with love and thanks Loftschool | 2017</div>
         </div>
       </footer>
     </div>
