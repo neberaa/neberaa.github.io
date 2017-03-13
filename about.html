@@ -19,22 +19,29 @@
     <script src="/js/anmtxt.js" defer></script>
     <script src="/js/slider.js" defer>   </script>
     <script src="/js/fullscreen-menu.js" defer></script>
+    <script src="/js/preloader.js" defer></script>
     <script src="https://use.fontawesome.com/7d7f486b48.js" defer></script>
     <title>A.N. about
     </title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="menu-container"><a class="x-icon__container" href="#"><i class="fa fa-times"></i></a>
-        <div class="menu-items__container">
-          <ul class="menu-list">
-            <li class="menu-item section-title_white"><a class="menu-link" href="works.html">Мои работы</a></li>
-            <li class="menu-item section-title_white"><a class="menu-link" href="blog.html">Блог</a></li>
-            <li class="menu-item section-title_white"><a class="menu-link" href="about.html">Обо мне</a></li>
-            <li class="menu-item section-title_white"><a class="menu-link" href="index.html">Авторизация</a></li>
-          </ul>
-        </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
       </div>
+    </div>
+    <div class="menu-container"><a class="x-icon__container" href="#"><i class="fa fa-times"></i></a>
+      <div class="menu-items__container">
+        <ul class="menu-list">
+          <li class="menu-item section-title_white"><a class="menu-link" href="works.html">Мои работы</a></li>
+          <li class="menu-item section-title_white"><a class="menu-link" href="blog.html">Блог</a></li>
+          <li class="menu-item section-title_white"><a class="menu-link" href="about.html">Обо мне</a></li>
+          <li class="menu-item section-title_white"><a class="menu-link" href="index.html">Авторизация</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
       <header class="hero">
         <div class="hero__bg"><img src="img/bg/portfolio.jpg" alt="mountain-view"></div>
         <div class="hero__decor-cloud"><img src="img/decor/cloud.png" alt="cloud"></div>
