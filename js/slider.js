@@ -166,19 +166,19 @@ var Slider = function (container) {
 
   this.moveSlide = function (direction) {
     var _that = this;
-    // if (direction === "next") {
-    //   if (_that.counter < itemsLength - 1) {
-    //     _that.counter++;
-    //   } else {
-    //     _that.counter = 0;
-    //   }
-    // } else {
-    //   if (_that.counter > 0) {
-    //     _that.counter--;
-    //   } else {
-    //     _that.counter = itemsLength - 1;
-    //   }
-    // }
+/*    if (direction === "next") {
+      if (_that.counter < itemsLength - 1) {
+        _that.counter++;
+      } else {
+        _that.counter = 0;
+      }
+    } else {
+      if (_that.counter > 0) {
+        _that.counter--;
+      } else {
+        _that.counter = itemsLength - 1;
+      }
+    }*/
 
     var directions = {
       next: function () {
@@ -232,5 +232,3 @@ $('.works-slider__control-btn_right').on('click', function (e) {
   e.preventDefault();
   slider.moveSlide('next');
 });
-
-console.dir(slider);
