@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Online shopping-change&amp;back</title>
+    <title>Online shopping-payment</title>
     <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -18,16 +18,16 @@
   </head>
   <body></body>
   <div class="wrapper">
-    <section class="change-back">
+    <section class="payment">
       <header class="header">
         <nav class="navigation navigation--left cl-effect-15"><a class="navigation__item navigation__item--margin0" href="index.html" data-hover="О нас">О нас</a>
           <div class="navigation__item submenu navigation__item--arrow active" href="#" data-hover="Покупателю">Покупателю
             <ul class="submenu__container">
-              <li class="submenu__item"><a class="submenu__link" href="#">Все об оплате</a></li>
+              <li class="submenu__item"><a class="submenu__link active" href="payment.html">Все об оплате</a></li>
               <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
-              <li class="submenu__item"><a class="submenu__link active" href="change&amp;back.html">Обмен и возврат</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
               <li class="submenu__item"><a class="submenu__link" href="#">Статус заказа</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Таблица размеров</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
               <li class="submenu__item"><a class="submenu__link" href="#">Отзывы о товарах</a></li>
             </ul>
           </div><a class="navigation__item" href="https://www.liqpay.ua/ru/checkout/i92963927641" data-hover="Оплата">Оплата</a>
@@ -51,11 +51,11 @@
             <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
             <li class="menu__item"><a class="menu__link submenu">Покупателю</a>
               <ul class="submenu__container">
-                <li class="submenu__item"><a class="submenu__link" href="#">Все об оплате</a></li>
+                <li class="submenu__item"><a class="submenu__link active" href="payment.html">Все об оплате</a></li>
                 <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
-                <li class="submenu__item"><a class="submenu__link active" href="change&amp;back.html">Обмен и возврат</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
                 <li class="submenu__item"><a class="submenu__link" href="#">Статус заказа</a></li>
-                <li class="submenu__item"><a class="submenu__link" href="#">Таблица размеров</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
                 <li class="submenu__item"><a class="submenu__link" href="#">Отзывы о товарах</a></li>
               </ul>
             </li>
@@ -86,15 +86,17 @@
           <use xlink:href="assets/img/sprite.svg#dollar-symbol"></use>
         </svg></a>
       <ul class="exchange-rate">Курсы валют</ul>
-      <div class="change-back__content">
-        <div class="change-back__title">Обмен и возврат</div>
-        <ul class="change-back__list">
-          <li class="change-back__item">Товар возврату и обмену НЕ подлежит!</li>
-          <li class="change-back__item">Мы не продаем товар, а оказываем услуги перевозки, выступая при этом посредником между Вами и американскими интернет-магазинами.</li>
-          <li class="change-back__item">Вся ответственность за заказанный товар (размер, цвет, фасон и пр.) лежит на Заказчике. </li>
-          <li class="change-back__item">Также следует понимать, что при заказах зарубежом есть определенные риски - пересорт, брак, различные несоответствия по цвету, размеру, свойствам, и т.д.</li>
-          <li class="change-back__item">При заказе хрупких и бьющихся товаров (изделия из стекла, керамики, посуда, статуэтки, и т.д.) Заказчик берет на себя полную ответственность за перевозку, осознавая, что товар при транспортировке подвержен битью и порче.</li>
-          <li class="change-back__item">Претензии к товару не принимаются, деньги не возвращаются.  То, что приезжает к нам, отправляется сразу Вам.</li><a class="main__button btn-2 btn-2g" href="order.html">Сделать заказ</a>
+      <div class="payment__content">
+        <div class="payment__title">Все об оплате</div>
+        <ul class="payment__list">
+          <li class="payment__item">Оплата производится на карту Приватбанка по расчетному курсу в день выставления счета в течение 1-2-х дней после выставления счета.</li>
+          <li class="payment__item">Сразу оплачивается сумма заказа (цена сайта с учетом комиссии или скидки, налог), оплата веса (доставка) оплачивается по приезду (спустя 2-4 недель для авиа и 5-7 недель для моря).</li>
+          <li class="payment__item">Штрафные санкции: в случае, если счет, который отправляется после выкупа товара, не будет оплачен в течение 2-х дней, на 3-й день на заказ будет дополнительно начислено 5% комиссионного сбора.</li>
+          <li class="payment__item">Если счет за доставку товара (вес) не будет оплачен в течение 2-х дней, то на 3-й день он пересчитывается по тарифу 15 &#36;/кг (авиа) и 10 &#36;/кг (море).</li>
+          <li class="payment__item">Если счет не оплачен в течение недели, то с 8-го дня начисляется пеня в размере 1% от суммы долга за каждый просроченный день, а клиент лишается дальнейшей возможности выкупа заказов без внесения предоплаты за них. </li>
+          <li class="payment__item">В случае повышения курса доллара и несвоевремнной оплаты счёта, заказ будет пересчитан по курсу на день оплаты.</li>
+          <li class="payment__item">В случае, если счет за доставку товара (вес) не будет оплачен в течении 60 дней, он передается на продажу без возврата ранее внесенных Вами средств, а вырученные деньги передаются в благотворительный фонд на помощь онкобольным детям. </li>
+          <li class="payment__item">Если по каким-либо причинам Вы не можете своевременно оплатить счет, пожалуйста, предупреждайте об этом, указав, конкретную дату платежа - мы всегда готовы войти в положение и понимаем, что в нашей жизни есть форс-мажорные обстоятельства, влияющие на сроки оплаты. </li><a class="main__button btn-2 btn-2g" href="order.html">Сделать заказ</a>
         </ul>
       </div>
     </section>
