@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:400,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/foundation.css">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/sprite.css">
     <script src="/assets/js/foundation.js" defer></script>
     <script src="/assets/js/app.js" defer></script>
     <script src="https://use.fontawesome.com/7d7f486b48.js" defer></script><!--[if lt IE 9]>
@@ -18,21 +19,62 @@
   </head>
   <body></body>
   <div class="wrapper">
-    <section class="order">
-      <header class="header">
-        <nav class="navigation navigation--left cl-effect-15"><a class="navigation__item navigation__item--margin0" href="index.html" data-hover="О нас">О нас</a>
-          <div class="navigation__item submenu navigation__item--arrow" href="#" data-hover="Покупателю">Покупателю
-            <ul class="submenu__container">
-              <li class="submenu__item"><a class="submenu__link" href="payment.html">Все об оплате</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Статус заказа</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Отзывы о товарах</a></li>
-            </ul>
-          </div><a class="navigation__item" href="https://www.liqpay.ua/ru/checkout/i92963927641" data-hover="Оплата">Оплата</a>
-        </nav>
-        <div class="navigation navigation--center"><a class="logo" href="#"><img class="logo__img" src="assets/img/logo.png" alt="internet-shopping logo"></a>
+    <section class="section order">
+      <div class="order-wrapper">
+        <div class="header-wrapper">
+          <header class="header">
+            <nav class="navigation navigation--left cl-effect-15"><a class="navigation__item navigation__item--margin0" href="about.html" data-hover="О нас">О нас</a>
+              <div class="navigation__item submenu navigation__item--arrow" data-hover="Покупателю">Покупателю
+                <ul class="submenu__container">
+                  <li class="submenu__item"><a class="submenu__link" href="payment.html">Все об оплате</a></li>
+                  <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
+                  <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
+                  <li class="submenu__item"><a class="submenu__link" href="status.html">Статус заказа</a></li>
+                  <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
+                  <li class="submenu__item"><a class="submenu__link" href="comment.html">Отзывы о товарах</a></li>
+                </ul>
+              </div><a class="navigation__item" href="https://www.liqpay.ua/ru/checkout/i92963927641" data-hover="Оплата">Оплата</a>
+            </nav>
+            <div class="navigation navigation--center"><a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo.png" alt="internet-shopping logo"></a>
+              <div class="social-wrapper"><a class="social" href="#">
+                  <svg class="social__icon facebook">
+                    <use xlink:href="assets/img/sprite.svg#facebook"></use>
+                  </svg></a><a class="social" href="#">
+                  <svg class="social__icon instagram">
+                    <use xlink:href="assets/img/sprite.svg#instagram"></use>
+                  </svg></a><a class="social" href="#">
+                  <svg class="social__icon vk">
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg></a></div>
+            </div>
+            <nav class="navigation navigation--right cl-effect-15"><a class="navigation__item navigation__item--margin0" href="index.html#categories" data-hover="Магазины">Магазины</a><a class="navigation__item" href="available.html" data-hover="В наличии">В наличии</a><a class="navigation__item" href="contacts.html" data-hover="Контакты">Контакты</a></nav>
+            <ul class="exchange-rate">Курсы валют</ul>
+          </header>
+        </div>
+        <section class="menu">
+          <ul class="menu__container">
+            <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+            <li class="menu__item"><a class="menu__link submenu">Покупателю</a>
+              <ul class="submenu__container">
+                <li class="submenu__item"><a class="submenu__link" href="payment.html">Все об оплате</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="status.html">Статус заказа</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="comment.html">Отзывы о товарах</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="https://www.liqpay.ua/ru/checkout/i92963927641">Оплата</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html#categories">Магазины</a></li>
+            <li class="menu__item"><a class="menu__link" href="available.html">В наличии</a></li>
+            <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+          </ul><a class="call" href="callto:+380990715162">099 071 51 62
+            <svg class="footer__icon phone">
+              <use xlink:href="assets/img/sprite.svg#phone"></use>
+            </svg></a><a class="email" href="mailto:internetshopping777@gmail.com">internetshopping777@gmail.com
+            <svg class="footer__icon envelope">
+              <use xlink:href="assets/img/sprite.svg#envelope"></use>
+            </svg></a>
           <div class="social-wrapper"><a class="social" href="#">
               <svg class="social__icon facebook">
                 <use xlink:href="assets/img/sprite.svg#facebook"></use>
@@ -40,64 +82,28 @@
               <svg class="social__icon instagram">
                 <use xlink:href="assets/img/sprite.svg#instagram"></use>
               </svg></a><a class="social" href="#">
-              <svg class="social__icon pinterest">
-                <use xlink:href="assets/img/sprite.svg#pinterest"></use>
+              <svg class="social__icon vk">
+                <use xlink:href="assets/img/sprite.svg#vk"></use>
               </svg></a></div>
-        </div>
-        <nav class="navigation navigation--right cl-effect-15"><a class="navigation__item navigation__item--margin0" href="#" data-hover="Посредники">Посредники</a><a class="navigation__item" href="#" data-hover="Пролеты">Пролеты</a><a class="navigation__item" href="#" data-hover="Контакты">Контакты</a></nav>
-      </header>
-      <ul class="exchange-rate">Курсы валют</ul>
-      <section class="menu">
-        <ul class="menu__container">
-          <li class="menu__item"><a class="menu__link" href="index.html">О нас</a></li>
-          <li class="menu__item"><a class="menu__link submenu">Покупателю</a>
-            <ul class="submenu__container">
-              <li class="submenu__item"><a class="submenu__link" href="payment.html">Все об оплате</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="delivery.html">Доставка</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="change&amp;back.html">Обмен и возврат</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Статус заказа</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="size.html">Таблица размеров</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Отзывы о товарах</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="https://www.liqpay.ua/ru/checkout/i92963927641">Оплата</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Посредники</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Пролёты</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-        </ul><a class="call" href="#">067 555 33 33
-          <svg class="footer__icon phone">
-            <use xlink:href="assets/img/sprite.svg#phone"></use>
-          </svg></a><a class="email" href="#">tanya@gmail.com
-          <svg class="footer__icon envelope">
-            <use xlink:href="assets/img/sprite.svg#envelope"></use>
+        </section><img class="triangle triangle--centered" src="assets/img/square.png" alt="internet-shopping logo">
+        <button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="currency" target="_BLANK" href="#">
+          <svg class="currency__icon dollar-symbol">
+            <use xlink:href="assets/img/sprite.svg#dollar-symbol"></use>
           </svg></a>
-        <div class="social-wrapper"><a class="social" href="#">
-            <svg class="social__icon facebook">
-              <use xlink:href="assets/img/sprite.svg#facebook"></use>
-            </svg></a><a class="social" href="#">
-            <svg class="social__icon instagram">
-              <use xlink:href="assets/img/sprite.svg#instagram"></use>
-            </svg></a><a class="social" href="#">
-            <svg class="social__icon pinterest">
-              <use xlink:href="assets/img/sprite.svg#pinterest"></use>
-            </svg></a></div>
-      </section><img class="triangle triangle--centered" src="assets/img/square.png" alt="internet-shopping logo">
-      <button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="currency" target="_BLANK" href="#">
-        <svg class="currency__icon dollar-symbol">
-          <use xlink:href="assets/img/sprite.svg#dollar-symbol"></use>
-        </svg></a>
-      <ul class="exchange-rate">Курсы валют</ul>
-      <div class="order__content">
-        <div class="order__title">Оформление заказа</div>
-        <ul class="order__list">
-          <li class="order__item">После того, как заказ прининят в обработку, от него отказаться или отменить НЕЛЬЗЯ, т.к. он уже выкуплен и за него заплачены деньги. </li>
-          <li class="order__item">При оформлении заказа необходимо копировать с сайта полное название товара, его размер, ссылку на товар и цвет.</li>
-          <li class="order__item">Если вы хотите заказать несколько размеров или расцветок одного товара, пожалуйста, оформляйте его новой позицией.</li>
-          <li class="order__item">Во избежание путаницы ничего переводить с английского на русский язык не нужно.</li>
-          <li class="order__item">Размещая заказ, вы подтверждаете, что ознакомлены с тарифами на доставку и условиями оплаты.</li>
-        </ul>
+        <div class="order__content">
+          <div class="section__title">Как начать покупки - размещение заказа</div>
+          <ul class="order__list">
+            <li class="section__item order__item order__item--strong">ВНИМАНИЕ! Текст содержит условия публичного договора, который вы принимаете автоматически, подтверждая свой заказ в Бандлере. Мы не являемся продавцами, а только помогаем вам сделать выгодные покупки в зарубежных магазинах. </li>
+            <li class="section__item order__item">Пошаговая инструкция по оформлению заказов здесь: <a href="http://bunddler.com/doc/c/">http://bunddler.com/doc/c/</a></li>
+            <li class="section__item order__item">Все заказы оформляются в Бандлере - это сайт-собиратель заказов.  Данная система позволяет упорядочить заказы и ничего не пропустить. В Бандлере нужно обязательно отмечать, что вы оплатили товар/доставку, там же имеется баланс, по которому можно сориентироваться.</li>
+            <li class="section__item order__item">Регистрируйтесь в Бандлере и следуйте подсказкам. Если возникнут какие-то вопросы - пишите Internetshopping777@gmail.com или в вайбер 0990715162, мы проконсультируем. Счета на оплату будут приходить Вам на электронную почту, с которой Вы произведете регистрацию. Следите за новыми письмами.</li>
+            <li class="section__item order__item order__item--strong">ВАЖНО! Все консультации, вопросы, уточнения задавайте ДО момента оформления и покупки товара. Обратите внимание, что отмена заказа после его выкупа невозможна. Поэтому, пожалуйста, ответственно подходите к выбору товаров. Помните, что заказы товаров через интернет несут определенный риск.</li>
+            <li class="section__item order__item order__item--strong">Мы помогаем вам совершить покупку и не несем ответственности за брак / пересортицу / неправильно подобранный размер, цвет или плохое качество. Вся ответственность за выбор товаров лежит на покупателе, поэтому делайте выбор осознанно. Возврата, обмена, гарантии на товары, к сожалению, нет. </li>
+          </ul>
+        </div>
       </div>
       <div class="order__form">
+        <div class="form__title">Оформление заявки</div>
         <div id="webOrderForm"></div>
         <script type="text/javascript">
           var _bunddlerSettings = {
@@ -113,8 +119,10 @@
           	var s = document.getElementsByTagName('script')[0];
           	s.parentNode.insertBefore(bunddler, s);
           })();
+          
         </script>
       </div>
+      <ul class="exchange-rate">Курсы валют</ul>
     </section>
   </div>
 </html>
