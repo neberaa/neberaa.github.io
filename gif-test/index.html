@@ -4,7 +4,8 @@
 
       var workerBlob = new Blob([workerStr], {type: 'application/javascript'});
 
-      const canvas = document.getElementById('canvas');
+        const chars = ["H", "e"];
+        const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         const canvasWidth = canvas.width;
         const canvasHeight = canvas.height;
@@ -14,7 +15,10 @@
         const cardPadding = 10;
         let imagesCanvas = {};
         let imageParams = {};
+        let imageCtx = {};
         const count = 4;
+        const totalFrames = 30;
+        let currentFrame = 1;
 
         let gif = new GIF({
           workers: 10,
@@ -24,18 +28,9 @@
 
         gif.on('finished', function(blob) {
           console.log('finished');
-          var img = document.querySelector("img");
+          const img = document.querySelector("img");
           img.src = URL.createObjectURL(blob);
         });
-
-        let position = {
-          x: cardPadding,
-          origX: cardPadding,
-          y: cardPadding,
-          origY: cardPadding,
-          xMax: canvas.width - cardPadding - cardWidth,
-          yMax: canvas.height - cardPadding - cardHeight
-        };
 
         function getCubicEase(currentProgress, start, distance, steps) {
             currentProgress /= steps/2;
@@ -46,10 +41,17 @@
             return distance/2*(Math.pow(currentProgress, 3)+ 2) + start;
         }
 
-        function getY(params) {
+        function getY(params, ind) {
           let distance = params.yTo - params.yFrom;
           let steps = params.frames;
           let currentProgress = params.frame;
+          if (currentProgress > steps) {
+            currentProgress -= steps;
+          }
+          if (ind < 3 && currentFrame > currentProgress) {
+            return params.yFrom;
+          }
+
           return getCubicEase(currentProgress, params.yFrom, distance, steps, params.type);
         }
 
@@ -59,36 +61,31 @@
         }
 
         function addImage(params) {
-          console.log('add image', params);
           for (let i = 1; i <= count; i++) {
-            console.log('draw image');
-            ctx.drawImage(imagesCanvas[i], 0, params.yFrom);
             imageParams[i] = params;
+            ctx.drawImage(imagesCanvas[i], 0, getY({...imageParams[i], type: 'cubic'}, i));
           }
           setTimeout(function() {
             window.requestAnimationFrame(drawCanvas);
             window.requestAnimationFrame(updateImages.bind(null, params))
           });
-          // ctx.drawImage(imagesCanvas[1], 0, getY({...params, type: 'cubic'}));
-          // ctx.drawImage(imagesCanvas[2], 0, getY({...params, type: 'cubic'}));
-          // ctx.drawImage(imagesCanvas[3], 0, params.yFrom);
-          // ctx.drawImage(imagesCanvas[4], 0, params.yFrom);
         }
 
         function updateImages(params) {
-          console.log('params', params.frame);
-          for (let i = 1; i <= count; i++) {
-            imageParams[i].frame = params.frame;
-            ctx.drawImage(imagesCanvas[i], 0, getY({...imageParams[i], type: 'cubic'}));
-            console.log('item', imageParams[i].yFrom, imageParams[i].yTo);
-          }
-          // ctx.drawImage(imagesCanvas[1], 0, getY({...params, type: 'cubic'}));
-          // ctx.drawImage(imagesCanvas[2], 0, getY({...params, type: 'cubic'}));
-          // ctx.drawImage(imagesCanvas[3], 0, params.yFrom);
-          // ctx.drawImage(imagesCanvas[4], 0, params.yFrom);
+          params.frame = currentFrame;
 
-        if (params.frame < params.frames) {
-          params.frame = params.frame + 1;
+          for (let i = 1; i <= count; i++) {
+            if (i === 3 || i === 4) {
+              if (currentFrame <= 5) {
+                imageParams[i].frame = 1;
+              } else if (currentFrame > 5) {
+                imageParams[i].frame = currentFrame - 4;
+              }
+            }
+            ctx.drawImage(imagesCanvas[i], 0, getY({...imageParams[i], type: 'cubic'}, i));
+          }
+        if (currentFrame < totalFrames) {
+          currentFrame++;
 
           gif.addFrame(canvas, {
             copy: true,
@@ -101,7 +98,7 @@
           });
           console.log('add');
         } else {
-          console.log(params.frame);
+          console.log(currentFrame);
           window.requestAnimationFrame(render);
         }
       }
@@ -109,6 +106,13 @@
         function render() {
            gif.render();
            console.log('render');
+        }
+
+        function createChar(char, x, y, i) {
+          imageCtx[i].font = "60px Arial";
+          imageCtx[i].fillStyle = "white";
+          imageCtx[i].textAlign = "center";
+          imageCtx[i].fillText(char, x, y);
         }
 
         function initImages() {
@@ -119,7 +123,6 @@
             imagesCanvas[i].width = cardWidth;
             imagesCanvas[i].height = cardHeight;
           }
-          // let image = document.getElementById(name);
 
           let imageCtx = imagesCanvas[1].getContext('2d');
           let imageCtx2 = imagesCanvas[2].getContext('2d');
